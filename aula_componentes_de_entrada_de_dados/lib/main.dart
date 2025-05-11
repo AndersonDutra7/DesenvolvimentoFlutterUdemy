@@ -1,6 +1,10 @@
+import 'package:aula_componentes_de_entrada_de_dados/aula_checkbox.dart';
+import 'package:aula_componentes_de_entrada_de_dados/aula_radio_button.dart';
 import 'package:aula_componentes_de_entrada_de_dados/campo_texto.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(home: CampoTexto(), debugShowCheckedModeBanner: false));
+  runApp(
+    MaterialApp(home: AulaRadioButton(), debugShowCheckedModeBanner: false),
+  );
 }
