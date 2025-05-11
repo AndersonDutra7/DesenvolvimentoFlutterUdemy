@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CampoTexto extends StatefulWidget {
-  const CampoTexto({super.key});
+class Aula01TextField extends StatefulWidget {
+  const Aula01TextField({super.key});
 
   @override
-  _CampoTextoState createState() => _CampoTextoState();
+  _Aula01TextFieldState createState() => _Aula01TextFieldState();
 }
 
-class _CampoTextoState extends State<CampoTexto> {
+class _Aula01TextFieldState extends State<Aula01TextField> {
   final TextEditingController _textEditingController = TextEditingController();
 
   @override
@@ -59,7 +59,7 @@ class _CampoTextoState extends State<CampoTexto> {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.white10,
+              foregroundColor: Colors.white,
               backgroundColor: Colors.lightBlue, // Cor de fundo do botão
             ),
             onPressed: () {

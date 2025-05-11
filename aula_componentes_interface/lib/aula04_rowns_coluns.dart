@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Aula4RowAndColumn extends StatelessWidget {
-  const Aula4RowAndColumn({super.key});
+class Aula04RowAndColumn extends StatelessWidget {
+  const Aula04RowAndColumn({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Row e Column no Flutter')),
+      appBar: AppBar(title: const Text('📖 Aula 04: Rowns e Columns')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

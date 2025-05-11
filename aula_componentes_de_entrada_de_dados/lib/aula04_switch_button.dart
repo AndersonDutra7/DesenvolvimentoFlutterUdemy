@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AulaSwitchButton extends StatefulWidget {
-  const AulaSwitchButton({super.key});
+class Aula04SwitchButton extends StatefulWidget {
+  const Aula04SwitchButton({super.key});
 
   @override
-  State<AulaSwitchButton> createState() => _AulaSwitchButtonState();
+  State<Aula04SwitchButton> createState() => _Aula04SwitchButtonState();
 }
 
-class _AulaSwitchButtonState extends State<AulaSwitchButton> {
+class _Aula04SwitchButtonState extends State<Aula04SwitchButton> {
   // Variáveis booleanas para armazenar os estados dos switches
   bool _comidaBrasileiraSelecionada = false;
   bool _comidaMexicanaSelecionada = false;

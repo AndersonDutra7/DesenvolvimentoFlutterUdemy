@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Aula5Text extends StatelessWidget {
-  const Aula5Text({super.key});
+class Aula05Text extends StatelessWidget {
+  const Aula05Text({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Manipulação de Textos')),
+      appBar: AppBar(title: const Text('📖 Aula 05: Textos')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

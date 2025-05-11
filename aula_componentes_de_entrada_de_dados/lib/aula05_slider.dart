@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AulaSlider extends StatefulWidget {
-  const AulaSlider({super.key});
+class Aula05Slider extends StatefulWidget {
+  const Aula05Slider({super.key});
 
   @override
-  State<AulaSlider> createState() => _AulaSliderState();
+  State<Aula05Slider> createState() => _Aula05SliderState();
 }
 
-class _AulaSliderState extends State<AulaSlider> {
+class _Aula05SliderState extends State<Aula05Slider> {
   // Valor atual do slider
   double _valorSelecionado = 50.0;
 

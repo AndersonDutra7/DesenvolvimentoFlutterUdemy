@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Aula6Buttons extends StatelessWidget {
-  const Aula6Buttons({super.key});
+class Aula06Buttons extends StatelessWidget {
+  const Aula06Buttons({super.key});
 
   void _mostrarMensagem(String tipo) {
     print('Você clicou no botão: $tipo');
@@ -10,7 +10,7 @@ class Aula6Buttons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Exemplo de Botões')),
+      appBar: AppBar(title: const Text('📖 Aula 06: Botões ')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

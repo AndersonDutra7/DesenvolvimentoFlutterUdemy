@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AulaCheckbox extends StatefulWidget {
-  const AulaCheckbox({super.key});
+class Aula02Checkbox extends StatefulWidget {
+  const Aula02Checkbox({super.key});
 
   @override
-  State<AulaCheckbox> createState() => _AulaCheckboxState();
+  State<Aula02Checkbox> createState() => _Aula02CheckboxState();
 }
 
-class _AulaCheckboxState extends State<AulaCheckbox> {
+class _Aula02CheckboxState extends State<Aula02Checkbox> {
   bool _comidaBrasileira = false;
   bool _comidaMexicana = false;
 

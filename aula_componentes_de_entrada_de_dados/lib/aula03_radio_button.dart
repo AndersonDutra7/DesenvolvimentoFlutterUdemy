@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AulaRadioButton extends StatefulWidget {
-  const AulaRadioButton({super.key});
+class Aula03RadioButton extends StatefulWidget {
+  const Aula03RadioButton({super.key});
 
   @override
-  State<AulaRadioButton> createState() => _AulaRadioButtonState();
+  State<Aula03RadioButton> createState() => _Aula03RadioButtonState();
 }
 
-class _AulaRadioButtonState extends State<AulaRadioButton> {
+class _Aula03RadioButtonState extends State<Aula03RadioButton> {
   // Variável para armazenar o valor selecionado pelo usuário
   int _opcaoSelecionada = 1;
 

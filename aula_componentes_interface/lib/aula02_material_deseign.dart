@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Aula2MaterialDeseign extends StatelessWidget {
-  const Aula2MaterialDeseign({super.key});
+class Aula02MaterialDeseign extends StatelessWidget {
+  const Aula02MaterialDeseign({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Exemplo Material')),
+      appBar: AppBar(title: Text('📖 Aula 02: Exemplo Material')),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
