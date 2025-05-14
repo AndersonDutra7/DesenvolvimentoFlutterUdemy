@@ -1,4 +1,6 @@
 import 'package:cap03_navegacao/tela_secundaria.dart';
+import 'package:cap03_navegacao/tela_dados.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -40,6 +42,26 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                 padding: EdgeInsets.all(16), //
               ),
               child: Text("Acessar Tela Secundária"),
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TelaDados(valor: "Anderson"),
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.lightBlue,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                padding: EdgeInsets.all(16), //
+              ),
+              child: Text("Acessar Tela de Dados"),
             ),
           ],
         ),
