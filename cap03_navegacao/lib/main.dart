@@ -1,10 +1,28 @@
+import 'package:cap03_navegacao/tela_route.dart';
 import 'package:cap03_navegacao/tela_secundaria.dart';
 import 'package:cap03_navegacao/tela_dados.dart';
 
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(home: TelaPrincipal(), debugShowCheckedModeBanner: false));
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: "/", // Define a rota inicial da aplicação, "home" da app.
+      routes: {
+        // Mapeamento das rotas nomeadas para as suas telas correspondentes.
+        "/":
+            (context) =>
+                TelaPrincipal(), // Quando a rota é "/", exibe a TelaPrincipal.
+        "/telaRoute": (context) => TelaRoute(valor: "Anderson"),
+        // Rota para TelaRoute. Passado o parâmetro "valor" direto na criação da tela.
+        "/telaSecundaria": (context) => TelaSecundaria(),
+        // Rota para TelaSecundaria, sem parâmetros.
+        "/telaDados": (context) => TelaDados(valor: "Rota Dados"),
+        // Rota para TelaDados, com parâmetro "valor" fixo.
+      },
+    ),
+  );
 }
 
 class TelaPrincipal extends StatefulWidget {
@@ -44,6 +62,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
               child: Text("Acessar Tela Secundária"),
             ),
             SizedBox(height: 16),
+
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -62,6 +81,22 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                 padding: EdgeInsets.all(16), //
               ),
               child: Text("Acessar Tela de Dados"),
+            ),
+            SizedBox(height: 16),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/telaRoute");
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueAccent,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                padding: EdgeInsets.all(16), //
+              ),
+              child: Text("Acessar Tela Route"),
             ),
           ],
         ),
