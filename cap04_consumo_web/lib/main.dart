@@ -1,5 +1,9 @@
-import 'package:cap04_consumo_web/home1.dart';
-import 'package:cap04_consumo_web/home2.dart';
+import 'package:cap04_consumo_web/aula04_evento_click.dart';
+import 'package:cap04_consumo_web/aula05_future.dart';
+import 'package:cap04_consumo_web/aula06-carregando_dados_list.dart';
+import 'package:cap04_consumo_web/aula1.dart';
+import 'package:cap04_consumo_web/aula2.dart';
+import 'package:cap04_consumo_web/aula3_list_view.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(home: Home2()));
+void main() => runApp(MaterialApp(home: Aula06()));
