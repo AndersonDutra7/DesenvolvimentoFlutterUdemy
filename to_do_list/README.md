@@ -1,4 +1,4 @@
-# Task Manager Flutter App
+# Lista de Tarefas App (To Do List)
 
 Aplicativo para gerenciamento de tarefas pessoais, com persistência local usando arquivo JSON.
 
@@ -47,24 +47,28 @@ lib/
 
 1. Clone este repositório:
 
-````bash
-git clone https://github.com/AndersonDutra7/DesenvolvimentoFlutterUdemy.git
 ```bash
+git clone https://github.com/AndersonDutra7/DesenvolvimentoFlutterUdemy.git
+```
 
 2. Entre no projeto:
+
 ```bash
 cd DesenvolvimentoFlutterUdemy/to_do_list
-```bash
+```
 
 3. Instale as dependências:
+
 ```bash
 flutter pub get
-```bash
+```
 
 4. Execute o app:
+
 ```bash
 flutter run
-```bash
+```
+
 ---
 
 🤝 Contribuições
@@ -90,4 +94,7 @@ LinkedIn | GitHub | andersonrdutra7@gmail.com
 
 📄 Licença
 Este projeto está licenciado sob a MIT License.
-````
+
+```
+
+```
