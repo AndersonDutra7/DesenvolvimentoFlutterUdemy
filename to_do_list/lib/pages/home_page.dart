@@ -64,6 +64,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       task.completed = value ?? false;
     });
+    _saveTasks();
   }
 
   /// Remove uma tarefa da lista e permite desfazer a ação
