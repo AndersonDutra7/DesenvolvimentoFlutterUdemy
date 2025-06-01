@@ -35,11 +35,13 @@ O design possui efeito de vidro fosco, com interface limpa e intuitiva, facilita
 
 ## 📦 Estrutura do Projeto
 
+```
 lib/
 ├── models/ # Modelos de dados (Task)
 ├── storage/ # Classe para persistência local (TaskStorage)
 ├── widgets/ # Componentes reutilizáveis (TaskItem, TaskDialog)
 └── pages/ # Telas da aplicação (HomePage)
+```
 
 ---
 
@@ -71,7 +73,8 @@ flutter run
 
 ---
 
-🤝 Contribuições
+## 🤝 Contribuições
+
 Contribuições são bem-vindas! Para contribuir:
 
 Fork este repositório.
@@ -82,19 +85,17 @@ Faça commit das suas alterações (git commit -m 'Minha feature').
 
 Envie para sua branch (git push origin feature/nome-da-feature).
 
-Abra um Pull Request aqui.
+[Abra um Pull Request aqui](https://github.com/AndersonDutra7/DesenvolvimentoFlutterUdemy/pulls).
 
 ---
 
-📞 Contato
-Anderson Raulino Dutra
-LinkedIn | GitHub | andersonrdutra7@gmail.com
+## 📞 Contato
+
+**Anderson Raulino Dutra**  
+[LinkedIn](https://www.linkedin.com/in/anderson-dutra-88b294211/) | [andersonrdutra7@gmail.com](mailto:andersonrdutra7@gmail.com)
 
 ---
 
-📄 Licença
+## 📄 Licença
+
 Este projeto está licenciado sob a MIT License.
-
-```
-
-```
