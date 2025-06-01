@@ -1,16 +1,93 @@
-# to_do_list
+# Task Manager Flutter App
 
-A new Flutter project.
+Aplicativo para gerenciamento de tarefas pessoais, com persistência local usando arquivo JSON.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📋 Descrição
 
-A few resources to get you started if this is your first Flutter project:
+Este projeto é um app de tarefas para dispositivos móveis, desenvolvido em Flutter. Permite adicionar, editar, concluir e excluir tarefas, armazenando os dados localmente no dispositivo para manter as informações mesmo após fechar o app.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+O design possui efeito de vidro fosco, com interface limpa e intuitiva, facilitando a organização diária do usuário.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🚀 Funcionalidades
+
+- Adicionar novas tarefas com título personalizado.
+- Editar título de tarefas existentes.
+- Marcar tarefas como concluídas ou pendentes.
+- Excluir tarefas com opção de desfazer ação.
+- Persistência local dos dados usando arquivos JSON no armazenamento do dispositivo.
+- Compatível com Android e iOS.
+
+---
+
+## 🛠 Tecnologias e Ferramentas
+
+- [Flutter](https://flutter.dev/) — Framework para desenvolvimento multiplataforma.
+- [Dart](https://dart.dev/) — Linguagem de programação usada.
+- `path_provider` — Para acessar diretórios do dispositivo.
+- JSON — Para armazenar e ler dados localmente.
+- Widgets personalizados para gerenciamento e exibição das tarefas.
+
+---
+
+## 📦 Estrutura do Projeto
+
+lib/
+├── models/ # Modelos de dados (Task)
+├── storage/ # Classe para persistência local (TaskStorage)
+├── widgets/ # Componentes reutilizáveis (TaskItem, TaskDialog)
+└── pages/ # Telas da aplicação (HomePage)
+
+---
+
+## 🚀 Como rodar o projeto
+
+1. Clone este repositório:
+
+````bash
+git clone https://github.com/AndersonDutra7/DesenvolvimentoFlutterUdemy.git
+```bash
+
+2. Entre no projeto:
+```bash
+cd DesenvolvimentoFlutterUdemy/to_do_list
+```bash
+
+3. Instale as dependências:
+```bash
+flutter pub get
+```bash
+
+4. Execute o app:
+```bash
+flutter run
+```bash
+---
+
+🤝 Contribuições
+Contribuições são bem-vindas! Para contribuir:
+
+Fork este repositório.
+
+Crie uma branch para sua feature (git checkout -b feature/nome-da-feature).
+
+Faça commit das suas alterações (git commit -m 'Minha feature').
+
+Envie para sua branch (git push origin feature/nome-da-feature).
+
+Abra um Pull Request aqui.
+
+---
+
+📞 Contato
+Anderson Raulino Dutra
+LinkedIn | GitHub | andersonrdutra7@gmail.com
+
+---
+
+📄 Licença
+Este projeto está licenciado sob a MIT License.
+````
