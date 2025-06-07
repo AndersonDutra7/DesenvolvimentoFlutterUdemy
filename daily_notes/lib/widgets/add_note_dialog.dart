@@ -1,25 +1,73 @@
 import 'package:flutter/material.dart';
+import 'package:daily_notes/data/models/note_model.dart';
+import 'package:daily_notes/data/database/notes_database.dart';
 
-Future<void> showAddNoteDialog(BuildContext context) async {
-  final TextEditingController titleController = TextEditingController();
-  final TextEditingController descriptionController = TextEditingController();
+Future<void> showAddNoteDialog(BuildContext context, {Note? noteToEdit}) async {
+  final TextEditingController titleController = TextEditingController(
+    text: noteToEdit?.title ?? '',
+  );
+  final descriptionController = TextEditingController(
+    text: noteToEdit?.description ?? '',
+  );
+
+  final FocusNode titleFocus = FocusNode();
+  final FocusNode descriptionFocus = FocusNode();
+
+  Future<void> saveNote() async {
+    final title = titleController.text.trim();
+    final description = descriptionController.text.trim();
+
+    if (title.isNotEmpty && description.isNotEmpty) {
+      final now = DateTime.now();
+
+      if (noteToEdit == null) {
+        final note = Note(
+          title: title,
+          description: description,
+          date: now.toIso8601String(),
+        );
+
+        await NotesDatabase.instance.insertNote(note);
+      } else {
+        final updatedNote = Note(
+          id: noteToEdit.id,
+          title: title,
+          description: description,
+          date: now.toIso8601String(),
+        );
+
+        await NotesDatabase.instance.updateNote(updatedNote);
+      }
+
+      Navigator.pop(context);
+    } else {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('Preencha todos os campos')));
+    }
+  }
 
   return showDialog(
     context: context,
     builder:
         (context) => AlertDialog(
-          title: const Text("Adicionar anotação"),
+          title: Text(
+            noteToEdit == null ? "Adicionar anotação" : "Editar anotação",
+          ),
           content: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 TextField(
                   controller: titleController,
-                  autofocus: true,
+                  focusNode: titleFocus,
+                  textInputAction: TextInputAction.next,
+                  onSubmitted:
+                      (_) =>
+                          FocusScope.of(context).requestFocus(descriptionFocus),
                   decoration: const InputDecoration(
                     labelStyle: TextStyle(
                       fontWeight: FontWeight.bold,
-                      // fontSize: 20,
                       color: Colors.black87,
                     ),
                     labelText: "Título",
@@ -35,11 +83,12 @@ Future<void> showAddNoteDialog(BuildContext context) async {
                 const SizedBox(height: 10),
                 TextField(
                   controller: descriptionController,
-                  autofocus: true,
+                  focusNode: descriptionFocus,
+                  textInputAction: TextInputAction.done,
+                  onSubmitted: (_) => saveNote(),
                   decoration: const InputDecoration(
                     labelStyle: TextStyle(
                       fontWeight: FontWeight.bold,
-                      // fontSize: 20,
                       color: Colors.black87,
                     ),
                     labelText: "Descrição",
@@ -69,21 +118,7 @@ Future<void> showAddNoteDialog(BuildContext context) async {
                 foregroundColor: Colors.blue,
                 textStyle: const TextStyle(fontWeight: FontWeight.bold),
               ),
-              onPressed: () {
-                final title = titleController.text.trim();
-                final description = descriptionController.text.trim();
-
-                if (title.isNotEmpty && description.isNotEmpty) {
-                  print('Título: $title');
-                  print('Descrição: $description');
-
-                  Navigator.pop(context);
-                } else {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Preencha todos os campos')),
-                  );
-                }
-              },
+              onPressed: saveNote,
               child: const Text('Salvar'),
             ),
           ],
